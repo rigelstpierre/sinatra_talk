@@ -8,7 +8,8 @@
 
 <div>
   <% if @result.any? %>
-    <%= @result %>
+    <% @result.each do |gif| %>
+      <iframe src="<%= gif.embed_url %>?html5=true" width="500" height="385" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    <% end %>
   <% end %>
 </div>
-
