@@ -2,6 +2,13 @@
 
 <h2> Search for a Gif </h2>
 <form action="/gif_search" method="post">
-  <input type="text" name="search[tgif_name]" />
+  <input type="text" name="search[gif_name]" />
   <input type="submit" value="Search for a Gif" />
 </form>
+
+<div>
+  <% if @result.any? %>
+    <%= @result %>
+  <% end %>
+</div>
+
